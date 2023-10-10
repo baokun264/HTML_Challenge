@@ -1,0 +1,157 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding: 0px 72px;
+  max-width: 100%;
+}
+h1 {
+  letter-spacing: -2px;
+  word-spacing: -2px;
+  margin: 0;
+}
+.text-regular {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 39px;
+}
+.text-medium {
+  font-weight: 500;
+  font-size: 16px;
+}
+.text-bold {
+  font-weight: 700;
+  font-size: 32px;
+}
+.text-large {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 79.2px;
+}
+
+.grid-container-header {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0px;
+}
+.grid-container-item-header {
+  display: grid;
+  column-gap: 48px;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.grid-container-main {
+  display: grid;
+  column-gap: 80px;
+  padding: 80px 0px;
+  grid-template-columns: 46.37% 49%;
+  justify-content: space-between;
+}
+.group-text {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.grid-item,
+.grid-icon,
+.grid-item-header {
+  display: flex;
+  align-items: center;
+}
+.grid-item-header {
+  padding: 12px 8px;
+}
+.grid-icon {
+  gap: 8px;
+}
+button {
+  cursor: pointer;
+}
+.group-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.btn,
+.btn-login {
+  background-color: #fff;
+}
+.btn-login,
+.btn-orange {
+  border: none;
+  padding: 12px 8px;
+}
+.btn-orange {
+  background-color: #ea580c;
+  border-radius: 8px;
+  color: #fff;
+  padding: 20px 48px;
+  margin-right: 32px;
+  border: 2px solid var(--orange-600, #ea580c);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.btn {
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid var(--blue-gray-900, #0f172a);
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.press-group {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 23% auto auto auto auto auto 40%;
+  align-items: center;
+}
+.group-img {
+  display: flex;
+}
+.img-teacher {
+  display: flex;
+  align-self: end;
+  position: relative;
+}
+.img-chat {
+  position: absolute;
+  right: -81px;
+  top: -197px;
+}
+.img-student {
+  padding-left: 58px;
+}
+.img-icon {
+  margin-top: 45px;
+}
+
+.special {
+  position: relative;
+  display: inline-block !important;
+}
+
+.special::before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  height: 10px;
+  width: 100% !important;
+  border: solid 15px #ea580c;
+  border-color: #ea580c transparent transparent transparent;
+  border-radius: 20%;
+}
