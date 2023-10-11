@@ -1,11 +1,21 @@
+:root {
+  --primary-color: #ea580c;
+  --size-large: 80px;
+  --size-small: 1.5rem;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 a {
   text-decoration: none;
 }
 .container {
-  padding: 0px 72px;
+  box-sizing: border-box;
+  margin: 0;
   max-width: 100%;
 }
 h1 {
@@ -15,99 +25,115 @@ h1 {
 }
 .text-regular {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 39px;
+  font-size: var(--size-small);
+  line-height: 2.5rem;
 }
 .text-medium {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 .text-bold {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
 }
 .text-large {
-  font-weight: 800;
-  font-size: 72px;
-  line-height: 79.2px;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+.grid-container-header,
+.grid-container-item-header,
+.grid-container-main {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
 }
 
 .grid-container-header {
-  display: grid;
   column-gap: 50px;
   grid-template-columns: auto auto;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 0px;
+  margin: var(--size-small) 80px;
 }
 .grid-container-item-header {
-  display: grid;
   column-gap: 48px;
   grid-template-columns: auto auto auto auto auto;
-  justify-content: space-between;
   cursor: pointer;
 }
 .grid-container-main {
-  display: grid;
-  column-gap: 80px;
-  padding: 80px 0px;
-  grid-template-columns: 46.37% 49%;
-  justify-content: space-between;
-}
-.group-text {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+  column-gap: var(--size-large);
+  margin: var(--size-large) 80px 80px 80px;
+  grid-template-columns: 45% 49%;
 }
 .grid-item,
 .grid-icon,
-.grid-item-header {
+.grid-item-header,
+.group-text,
+.group-btn,
+.link,
+.img-teacher {
   display: flex;
   align-items: center;
 }
+
+.group-text {
+  flex-direction: column;
+  gap: var(--size-large);
+  justify-content: flex-start;
+}
 .grid-item-header {
   padding: 12px 8px;
-}
-.grid-icon {
   gap: 8px;
 }
 button {
   cursor: pointer;
 }
 .group-btn {
-  display: flex;
-  align-items: center;
   gap: 16px;
 }
 .btn,
 .btn-login {
   background-color: #fff;
 }
-.btn-login,
-.btn-orange {
+.btn-login {
   border: none;
   padding: 12px 8px;
 }
+.text-btn {
+  padding: 0 16px;
+}
 .btn-orange {
-  background-color: #ea580c;
+  background-color: var(--primary-color);
   border-radius: 8px;
   color: #fff;
-  padding: 20px 48px;
+  padding: 20px 24px;
   margin-right: 32px;
-  border: 2px solid var(--orange-600, #ea580c);
-  font-size: 24px;
+  border: 2px solid var(--primary-color);
+  font-size: var(--size-small);
   font-weight: 700;
-  line-height: 24px;
+  line-height: var(--size-small);
   letter-spacing: 0.5px;
+}
+.text-btn-orange {
+  padding: 0 24px;
+  font-size: 22px;
+}
+.btn-orange:hover {
+  background-color: #dc5603;
+}
+.btn:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 .btn {
   border-radius: 8px;
+  transition: all 0.5s ease;
   padding: 12px;
-  border: 2px solid var(--blue-gray-900, #0f172a);
+  border: 2px solid #0f172a;
 }
 .link {
-  display: flex;
-  align-items: center;
   gap: 16px;
   font-size: 20px;
   font-weight: 500;
@@ -116,14 +142,11 @@ button {
 .press-group {
   display: grid;
   gap: 48px;
-  grid-template-columns: 23% auto auto auto auto auto 40%;
+  grid-template-columns: 24% auto auto auto auto auto 40%;
   align-items: center;
-}
-.group-img {
-  display: flex;
+  width: 100%;
 }
 .img-teacher {
-  display: flex;
   align-self: end;
   position: relative;
 }
@@ -131,9 +154,6 @@ button {
   position: absolute;
   right: -81px;
   top: -197px;
-}
-.img-student {
-  padding-left: 58px;
 }
 .img-icon {
   margin-top: 45px;
@@ -143,15 +163,26 @@ button {
   position: relative;
   display: inline-block !important;
 }
-
-.special::before {
-  content: "";
+.special-img {
   position: absolute;
-  bottom: -25px;
+  bottom: -40px;
   left: 0;
-  height: 10px;
+  z-index: -1;
+  height: 100px;
   width: 100% !important;
-  border: solid 15px #ea580c;
-  border-color: #ea580c transparent transparent transparent;
-  border-radius: 20%;
 }
+.group-img {
+  display: flex;
+  justify-self: flex-end;
+}
+.text-press {
+  font-size: 16px;
+  font-weight: 400;
+  color: #475569;
+  line-height: 22px;
+}
+.chat-img{
+  width: 100%; 
+  max-width: 625px;
+}
+
